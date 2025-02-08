@@ -1,4 +1,4 @@
-# NF Energy Monitor Deploy
+# Amecs Solar Logger Deploy
 
-Base image is [here](https://github.com/yanorei32/nf-energy-monitor)
+Base image is [here](https://github.com/yanorei32/amecs-solar-logger)
 Deployed on: mitou (compose-cd)
