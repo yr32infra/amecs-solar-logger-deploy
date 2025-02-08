@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  amecssolarlogger:
+    image: ghcr.io/yanorei32/amecs-solar-logger:latest@sha256:cfff10598d06679e0b6f436a456d3071f1b2e174159aa455dae69a380bd063b0
+    hostname: amecssolarlogger
+    container_name: amecssolarlogger__amecssolarlogger
+    restart: unless-stopped
+
+    environment:
+      LAT: ${LAT}
+      LON: ${LON}
+      INFL_HOST: https://influxdb.yr32.net
+      INFL_TOKEN: ${INFL_TOKEN}
+      INFL_ORG: default
+      INFL_BUCKET: power
+
+    command: /usr/bin/amecs-solar-logger run
+
+    deploy:
+      resources:
+        limits:
+          memory: 128m
+
+    networks:
+      - default
+
+networks:
+  default:
+    name: amecssolarlogger__default
