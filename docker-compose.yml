@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   amecssolarlogger:
-    image: ghcr.io/yanorei32/amecs-solar-logger:latest@sha256:3a3054dc8b729d85b86235a23b2b1401bdeeecc48a6a79eb38ca3c36da261754
+    image: ghcr.io/yanorei32/amecs-solar-logger:latest@sha256:5183efcd53591a619ee071037cb06f67b875c322cbe208c9997929a16d099588
     hostname: amecssolarlogger
     container_name: amecssolarlogger__amecssolarlogger
     restart: unless-stopped
